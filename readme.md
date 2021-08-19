@@ -23,4 +23,7 @@ I used PHP Curl to call the API's
 
 Upload database
 db_japan_tour.sql
+
+Update .htaccess and config file @ application/configs/config.php * change the config_url
+
 ###################
