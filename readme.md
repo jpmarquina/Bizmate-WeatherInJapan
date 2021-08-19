@@ -21,5 +21,6 @@ Functions for weather and venue API's located in
 /application/helpers/custom_functions.php
 I used PHP Curl to call the API's
 
-
+Upload database
+db_japan_tour.sql
 ###################
