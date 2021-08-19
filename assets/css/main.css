@@ -1,0 +1,287 @@
+/* main css goes here */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  font-family: inherit;
+}
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+html, body {
+  width: 100%;
+  height: auto;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.3;
+  background-color: #ffdbdb;
+  margin-top: 120px;
+  padding-bottom: 60px;
+}
+
+.loading-overlay {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('../images/loader.gif');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 50px 50px;
+  z-index: 0;
+}
+
+.loading .loading-overlay {
+  display: block;
+}
+
+.loading .weather-container-wrapper {
+  overflow-y: hidden;
+}
+
+.main-header {
+  position: fixed;
+  width: 100%;
+  z-index: 1;	
+  top: 0;
+  left: 0;
+}
+
+.weather-container-wrapper {
+  position: relative;	
+  min-height: 220px;
+  background-color: #ffffff;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  padding: 40px;
+}
+
+.weather-container-wrapper h1 {
+  font-weight: 100;
+  font-size: 5rem;
+}
+
+.weather-container-wrapper h2 {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.contents-container-wrapper {
+  background-color: #ffffff;
+  border-radius: 15px;
+  position: relative;	
+  border-radius: 10px;
+}
+
+.contents-main-image {
+  border-radius: 10px 10px 0 0;
+}
+
+.navbar {
+  background-color: rgba(255,255,255,0.8);
+  margin-bottom: 50px;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+  color: #434242;
+  font-size: 1.5rem;
+  font-weight: 300;
+} 
+
+.nav-item {
+  margin: 0 20px;
+  position: relative;
+}
+
+.nav-item.active {
+
+}
+
+.active .nav-link:after, .nav-link:hover:after {
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 100%;
+  border-bottom: 5px solid #ff6160;	
+}
+
+.text-red {
+	color: #ff6160;
+}
+
+.text-blue {
+	color: #3f508d;
+}
+
+.contents {
+  position: relative;	
+}
+
+.contents h1 {
+  font-size: 3rem;
+  font-weight: 200;
+}
+
+.contents h4 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.contents h6 {
+  font-size: 1.275rem;
+  font-weight: 500;
+}
+
+.contents h6 strong {
+  font-weight: 500;
+}
+
+.contents p {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.4rem;
+}
+
+.blur-bottom {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 150px;
+  background: #ffffff;
+  content: '';
+  z-index: 1;
+  left: 0;
+  right: 0;
+}
+
+@media (max-width: 1020px) {
+	
+	.navbar-toggled:after {
+	  position: fixed;
+	  background-color: rgba(0, 0, 0, 0.5);
+	  background-image: linear-gradient(#434242, transparent);
+	  width: 100%;
+	  height: 100%;
+	  left: 0;
+	  top: 0;
+	  content: '';
+	  transition: all 300ms ease-in-out;
+	  opacity: 1;
+	}
+	
+	body {
+	  margin-top: 60px;
+	  padding-bottom: 40px;
+	}
+	
+	.main-header {
+	  background: rgba(255, 255, 255, 0.8);
+	}
+	
+	.main-menu-burger {
+	  width: 50px;
+	  content: '';
+	  right: 0;
+	  padding: 10px;
+	  cursor: pointer;
+	}
+	
+	.pattie {
+	  width: 100%;
+	  height: 4px;
+	  background-color: #434242;
+	  content: '';
+	  display: block;
+	  margin-bottom: 5px;
+	  transition: all 300ms ease-in-out;
+	  transform-origin: 2px 2px;
+	}
+	
+	.pattie:last-child {
+	  margin: 0;
+	}
+	
+	.toggled .pattie {
+	  background-color: #ffffff;
+	}
+	
+	.toggled .pattie.middle {
+	  opacity: 0;
+	}
+	
+	.toggled .pattie:first-child {
+	  transform: rotate(45deg);
+	}
+	
+	.toggled .pattie:last-child {
+	  transform: rotate(-45deg);
+	}
+	
+	.navbar-toggled .main-header, .navbar-toggled .navbar { 
+	  background-color: transparent;
+	}
+	
+	.navbar {
+	  margin: 0 auto;
+	  margin-left: 2.5%;
+	  border-radius: 7px;
+	  width: 95%;
+	  opacity: 0;
+	  display: none;
+	  transition: all 300ms ease-in-out;
+	  z-index: 9;
+	  position: absolute;
+	}
+	
+	.navbar-collapse {
+	  display: block;
+	  width: 100%;
+	  background-color: #ffffff;
+	  border-radius: 7px;
+	  z-index: 9999;
+	  text-align: center;
+	}
+	.navbar-collapse.collapse.show li a {
+	  text-align: center;
+	  display: block;
+	} 
+	
+	.navbar-toggled .navbar {
+	  display: block;
+	  opacity: 1;
+	}
+	
+	
+	.contents-container-wrapper {
+	  max-height: 100%;
+	}
+
+	.active .nav-link:after, .nav-link:hover:after {
+	  border-bottom: 0;	
+	}
+
+}
