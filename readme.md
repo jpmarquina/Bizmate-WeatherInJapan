@@ -1,4 +1,6 @@
 ###################
+
+
 UI / UX 
 I choose to designed it as minimalist as posible because I know japan is famous for minimalism also for travelers who uses phone a lot instead of laptop/PC's they need to get or view the weather and attractions as soon as posible.
 Fonts are not that big or small specially for the users who uses small screen devices.
@@ -18,4 +20,6 @@ Ajax Function for weather located in
 Functions for weather and venue API's located in
 /application/helpers/custom_functions.php
 I used PHP Curl to call the API's
+
+
 ###################
